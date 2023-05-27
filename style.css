@@ -1,0 +1,59 @@
+body{
+    background-color: rgb(225, 219, 219);
+    margin: 0;
+}
+
+#nav-bar{
+    background-color: black;
+    width: 100vw;
+    height: 5vw;
+    font-family: 'Poppins', sans-serif;
+    color: aquamarine;
+    padding-top: 5vw;
+    padding-left: 5vw;
+
+    
+}
+
+.nav-item{
+    margin-left: 5vw;
+    font-size: larger;
+
+}
+
+button{
+    background-color: bisque;
+    padding: 0.5%;
+    position: absolute;
+    right: 10vw;
+}
+
+#body-content{
+    position: absolute;
+    right: 15vw;
+    top: 13vw;
+}
+
+#body-head{
+    color: black;
+    font-size: 3vw;
+}
+
+#body-subhead{
+    color: rgb(171, 37, 37);
+    font-size: 2vw;
+}
+
+#body-bthead{
+    color: rgb(100, 171, 37);
+    font-size: 3vw;
+}
+
+.img{
+    size: 0.25%;
+    position: relative;
+    top: 2vw;
+    left: 5vw;
+    width: 35vw;
+    height: 35vw;
+}

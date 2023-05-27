@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    count=0
+    function changeTheme(){
+        if(count%2==1){
+            document.body.style.backgroundColor="rgb(0,0,0)"
+            document.getElementById("nav-bar").style.backgroundColor="rgb(255,255,255)"
+            document.getElementsByTagName("button")[0].style.backgroundColor="white"
+            count++; 
+        }
+        else{
+            document.body.style.backgroundColor="rgb(255,255,255)"
+            document.getElementById("nav-bar").style.backgroundColor="rgb(0,0,0)"
+            document.getElementsByTagName("button")[0].style.backgroundColor="white"
+            count++;
+
+        }
+    }
+</script>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
+      </style>
+    <div id="nav-bar">
+        <span class="nav-item"> home</span>
+        <span class="nav-item"> name</span>
+        <span class="nav-item">college</span>
+        <span class="nav-item">  about_us</span>
+
+        <button onclick="changeTheme()">Contact</button>
+    
+
+    </div>
+     <div id="body-content"> 
+     <span id="body-head" >GDSC summer school </span>
+     <br><br>
+     <span id="body-subhead">Iam a web </span>
+     <br>
+     <span id="body-bthead">Developer... </span>
+     <br><br><br><br>
+     <span id="body-bhead">Iam from Khammam.I completed inter <br>
+    in kvjc.I will be loving to <br>
+     to code.</span>
+
+</div>
+
+<img src="sai.jpg" alt="no internet" class="img">
+    
+</body>
+</html>
