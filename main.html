@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-Lighting</title>
+    <script src="main.js"></script>
+</head>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+<script>
+    value=[]
+    function populate(){
+        para=corpus.split(' ')
+        //console.log(para)
+
+        for(i=0;i<para.length;i++){
+            value.push('white')
+            id="s"+i
+            document.getElementById("content").innerHTML += "<span id="+id+">"+para+"</span>"
+            document.getElementById(id).setAttribute('onclick',highlet( id ))
+            
+        }
+        
+    }
+
+    function highlet(id){
+        //console.log(id)
+        index=parseInt(id.slice(1,id.length))
+        word=document.getElementById(id)
+        console.log(index)
+
+        if(value[index] =='white'){
+            word.style.backgroundColor="black"
+            word.style.color="white"
+            value[index]="black"
+        }
+        else{
+            word.style.backgroundColor="white"
+            word.style.color="black"
+            value[index]="white"
+
+        }
+    }
+
+    function button(){
+        Email.send({
+            Host : "3bff84f5-245c-4244-b856-3228b073bba3 ",
+            Username : "alasai",
+            Password : "password",
+            To : 'sudigalialasai@gmail.com',
+            From : "421260@student.nitandhra.ac.in",
+            Subject : "This is the subject",
+            Body : "And this is the body"
+        }).then(
+          message => alert(message)
+        );
+    }
+
+</script>
+<body onload="populate()">
+    <div id="content">
+        <input type="text" id="input">
+        <button onclick="button()">send mail</button>
+
+    </div>
+    
+</body>
+</html>
